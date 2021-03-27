@@ -13,12 +13,12 @@
 <iframe id="youtube_video" width="300" height="300" frameborder="0" allowfullscreen></iframe>
 </center>
 <script type="text/javascript">
-var channelID = "UCcd7RCh3QE8tBcSZNjbk6OA";
-var reqURL = "https://www.youtube.com/feeds/videos.xml?channel_id=";
-$.getJSON("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(reqURL)+channelID, function(data) {
-   var link = data.items[0].link;
-   var id = link.substr(link.indexOf("=")+1);
-$("#youtube_video").attr("src","https://youtube.com/embed/"+id + "?controls=0&showinfo=0&rel=0");
+var channel_id = "UCcd7RCh3QE8tBcSZNjbk6OA";
+var req = "https://www.youtube.com/feeds/videos.xml?channel_id=";
+$.getJSON("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(req) + channel_id,function(d){
+var link = d.items[0].link;
+var video_id = link.substr(link.indexOf("=")+1);
+$("#youtube_video").attr("src","https://youtube.com/embed/"+id + "?frameborder="0"&controls=0&showinfo=0&rel=0&allowfullscreen");
 });
 </script>
 </body>
