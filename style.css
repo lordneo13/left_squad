@@ -34,6 +34,8 @@ padding : 15px 35px;
 text-align : center;
 text-decoration : none;
 display : inline-block;
+font-family : "Atma",cursive;
+font-family : "Mina",sans-serif;
 font-size : 15px;
 box-shadow : 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
