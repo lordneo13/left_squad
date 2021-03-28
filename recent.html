@@ -19,10 +19,10 @@ var req = "https://www.youtube.com/feeds/videos.xml?channel_id=";
 $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(req) + channel_id,function(d){
 var link = d.items[0].link;
 var video_id = link.substr(link.indexOf("=")+1);
-$("#"+iframe+"").attr("src","https://youtube.com/embed/"+ video_id);
+$(iframe).attr("src","https://youtube.com/embed/"+ video_id);
 });
 }
-c0("UCcd7RCh3QE8tBcSZNjbk6OA","youtube_video_0");
+c0("UCcd7RCh3QE8tBcSZNjbk6OA","#youtube_video_0");
 </script>
 </body>
 </html>
