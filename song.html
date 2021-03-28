@@ -33,10 +33,18 @@ padding : 10px 10px;
 <div class="container">লেনিন
 </div></div><br>
 <script type="text/javascript">
+var lenin_play = false;
 var lenin = new Audio();
 lenin.src = "lenin.mp3";
 document.getElementById("lenin").addEventListener("click",function(){
+if(lenin_play == false){
+lenin_play = true;
 lenin.play();
+}
+else{
+lenin_play = false;
+lenin.pause();
+}
 });
 </script>
 </body>
