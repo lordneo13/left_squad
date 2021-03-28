@@ -23,7 +23,7 @@ box-shadow : 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 div.container{
 text-align : center;
-/*padding : 10px 10px;*/
+padding : 10px 10px;
 }
 label{
 color : #8C0A00
@@ -37,12 +37,15 @@ color : #8C0A00
 </div></div>
 <div class="polaroid">
 <img id="lenin" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO9NylIgbQd83z4RXCNsr2LAGY_eiVAeTXaw&usqp=CAU">
-<div class="container"><label>কমরেড</label> লেনিনের আহ্বান
+<div class="container">ওরা আমাদের গান গাইতে দেয়না
 </div></div><br>
 <script type="text/javascript">
 var lenin_play = false;
+var s0_play = false;
 var lenin = new Audio();
 lenin.src = "lenin.mp3";
+var s0 = new Audio();
+s0.src = "s0.mp3";
 document.getElementById("lenin").addEventListener("click",function(){
 if(lenin_play == false){
 lenin_play = true;
@@ -51,8 +54,16 @@ lenin.play();
 else{
 lenin_play = false;
 lenin.pause();
+}});
+document.getElementById("s0").addEventListener("click",function(){
+if(s0_play == false){
+s0_play = true;
+s0.play();
 }
-});
+else{
+s0_play = false;
+s0.pause();
+}});
 </script>
 </body>
 </html>
